@@ -1,16 +1,13 @@
-import React, { Component } from 'react'
-import logo from './logo.png'
+import React from 'react';
 import {Link} from "react-router-dom";
 
-export class Navbar extends Component {
+const Navbar = () => {
 
-    render() {
         return (
             <div>
-
-                <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/"><img src={logo} alt="logo" width="55" height="34" style={{paddingLeft: '10px'}}/></Link>
+                        <Link className="navbar-brand" to="/" style={{fontWeight:"600"}}>NEWS TOP UPS</Link>
                         {/* <div className="form-check form-switch">
                             <input className="form-check-input" onClick={this.toggleStyle} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">☼/☾</label>
@@ -48,6 +45,5 @@ export class Navbar extends Component {
             </div>
         )
     }
-}
 
-export default Navbar
+export default Navbar;
